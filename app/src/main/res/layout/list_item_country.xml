@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="country"
+            type="com.example.interviewdemo.network.Country" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="12dp"
+        android:weightSum="6">
+
+        <ImageView
+            android:id="@+id/imgAway"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            app:image_url="@{country.flagUrl}"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/countryName"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="2"
+            android:padding="4dp"
+            android:text="@{country.name}"
+            tools:text="Hungary" />
+
+        <TextView
+            android:id="@+id/capitalCity"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="2"
+            android:padding="4dp"
+            android:text="@{country.capital}"
+            tools:text="Budapest" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
