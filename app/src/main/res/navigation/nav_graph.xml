@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ListFragment">
+
+    <fragment
+        android:id="@+id/ListFragment"
+        android:name="com.example.interviewdemo.ui.list.ListFragment"
+        android:label="List Fragment"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/action_ListFragment_to_TaskOneFragment"
+            app:destination="@id/TaskOneFragment"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/TaskOneFragment"
+        android:name="com.example.interviewdemo.ui.taskOne.TaskOneFragment"
+        android:label="Task One Fragment"
+        tools:layout="@layout/fragment_task_one">
+    </fragment>
+
+</navigation>
