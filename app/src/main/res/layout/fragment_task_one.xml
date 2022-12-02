@@ -36,6 +36,7 @@
             android:textColor="@color/white"
             android:layout_margin="12dp"
             android:padding="12dp"
+            android:onClick="@{() -> viewModel.emittingNumbers()}"
             android:text="Show list"
             />
 

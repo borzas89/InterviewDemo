@@ -27,13 +27,7 @@ class TaskOneFragment: Fragment() {
             viewModel = this@TaskOneFragment.viewModel
         }
 
-        binding.btnAdd.setOnClickListener {
-            viewModel.emittingNumbers()
-        }
-
         return binding.root
     }
-
-
 
 }
